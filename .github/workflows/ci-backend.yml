@@ -32,7 +32,7 @@ jobs:
     if: github.event_name == 'pull_request'
     steps:
       - name: Checkout
-        uses: actions/chechkout@v4
+        uses: actions/checkout@v4
       - name: Filtro de arquivos
         id: filter
         uses: dorny/paths-filter@v3
@@ -46,4 +46,4 @@ jobs:
         with:
           type: now
           target_branch: main
-          github_token: ${{github.token}}
+          github_token: ${{ github.token }}

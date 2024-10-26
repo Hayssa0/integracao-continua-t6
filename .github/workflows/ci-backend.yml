@@ -7,6 +7,11 @@ on:
     paths:
       - 'sgcmapi/**'
   workflow_dispatch:
+  workflow_call:
+  pull_request:
+    paths:
+      - 'sgcmapi/**'
+      
 jobs:
   build:
     runs-on: ubuntu-latest

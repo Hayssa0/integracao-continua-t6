@@ -20,7 +20,6 @@ jobs:
               with:
                 service-id: ${{secrets.RENDER_SERVICE_ID}}
                 api-key: ${{secrets.RENDER_API_KEY}}
-                wait_for_sucess: true
+                wait_for_success: true
                 
 
-                

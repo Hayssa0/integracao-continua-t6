@@ -7,7 +7,7 @@ jobs:
 
     ci:
         name: CI Workflow Main
-        uses: ./.github/workflowa/ci-backend.yml
+        uses: ./.github/workflows/ci-backend.yml
 
     deploy:
         needs: ci
@@ -16,7 +16,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
             - name: Deploy
-              uses: jhonbeynon/render-deploy-actions@master
+              uses: jhonbeynon/render-deploy-action@master
               with:
                 service-id: ${{secrets.RENDER_SERVICE_ID}}
                 api-key: ${{secrets.RENDER_API_KEY}}
